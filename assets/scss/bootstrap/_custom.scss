@@ -1,3 +1,173 @@
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background: red;
+  background-color: #eeeeee;
+  font-family: $avenir-book;
+  font-size: 1.6rem;
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  color: $main-color;
+  text-transform: none;
+}
+
+ul {
+  margin: 0;
+}
+
+.page-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  .navbar {
+    .navbar-brand {
+      padding-top: 0;
+    }
+  }
+}
+
+#social {
+  .social-media {
+    list-style: none;
+    li {
+      display: inline-block;
+      padding: 5px;
+      a {
+        color: $main-color;
+      }
+    }
+  }
+}
+
+.owl-carousel {
+  .owl-nav {
+    .owl-prev, .owl-next {
+      position: absolute;
+      top: 50%;
+      z-index: 999;
+      height: 100%;
+      background-color: rgba(63, 145, 255, 0.6);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 15.65vw;
+      color: $white;
+      .fa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+    }
+    .owl-prev {
+      left: 0;
+    }
+    .owl-next {
+      right: 0;
+    }
+  }
+}
+
+.myBtn {
+  background-color: $blue;
+  border: 0;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  color: $white;
+  padding: 8px 25px;
+  .fa {
+    margin-left: 7px;
+  }
+}
+
+.scroll-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  width: 100%;
+  .scroll {
+    background-color: #ededed;
+    color: #83b5f8;
+    font-size: 3rem;
+    padding: 12px;
+    width: 60px;
+    height: 60px;
+    border: 0;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(26, 85, 166, 0.3);
+  }
+}
+
+.form {
+  input, textarea {
+    border: 2px solid #8e99a8;
+    border-radius: 0;
+    background: transparent;
+    padding: 12px;
+    font-size: 1.2rem;
+  }
+  .form-group {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+#section1 {
+  &:after {
+    content: url("../img/background.png");
+    position: absolute;
+    right: 0;
+    top: 26%;
+    z-index: -1;
+  }
+}
+
+#section2 {
+  .gallery-top {
+    height: 50%;
+    position: relative;
+    .container {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .gallery-bottom {
+    height: 50%;
+    background-color: $blue;
+  }
+  .gallery {
+    [class*='col-md-'] {
+      padding: 0;
+    }
+  }
+}
+#section3 {
+  background-color: $blue;
+  h1, h2, h3, h4, h5, h6, p {
+    color: $white;
+  }
+  .myBtn {
+    &.inverse {
+      background-color: #ededed;
+      color: #83b5f8;
+    }
+  }
+}
+
+#page-footer {
+  #social {
+    background-color: #e8e8e8;
+    padding: 40px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 }

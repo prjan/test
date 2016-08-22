@@ -1,3 +1,48 @@
+@font-face {
+  font-family: 'Avenir Heavy';
+  src: url('../fonts/subset-Avenir-Heavy.eot');
+  src: url('../fonts/subset-Avenir-Heavy.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/subset-Avenir-Heavy.woff2') format('woff2'),
+  url('../fonts/subset-Avenir-Heavy.woff') format('woff'),
+  url('../fonts/subset-Avenir-Heavy.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Roman';
+  src: url('../fonts/subset-Avenir-Roman.eot');
+  src: url('../fonts/subset-Avenir-Roman.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/subset-Avenir-Roman.woff2') format('woff2'),
+  url('../fonts/subset-Avenir-Roman.woff') format('woff'),
+  url('../fonts/subset-Avenir-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Medium';
+  src: url('../fonts/subset-Avenir-Medium.eot');
+  src: url('../fonts/subset-Avenir-Medium.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/subset-Avenir-Medium.woff2') format('woff2'),
+  url('../fonts/subset-Avenir-Medium.woff') format('woff'),
+  url('../fonts/subset-Avenir-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Avenir Book';
+  src: url('../fonts/subset-Avenir-Book.eot');
+  src: url('../fonts/subset-Avenir-Book.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/subset-Avenir-Book.woff2') format('woff2'),
+  url('../fonts/subset-Avenir-Book.woff') format('woff'),
+  url('../fonts/subset-Avenir-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 $bootstrap-sass-asset-helper: false !default;
 //
 // Variables
@@ -20,6 +65,9 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
 $brand-danger:          #d9534f !default;
+$main-color:            #8e99a8 !default;
+$white:                 #ffffff !default;
+$blue:                  #3d8fff !default;
 
 
 //== Scaffolding
@@ -48,6 +96,11 @@ $font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
+
+$avenir-heavy:        "Avenir Heavy", sans-serif !default;
+$avenir-roman:        "Avenir Roman", sans-serif !default;
+$avenir-medium:       "Avenir Madium", sans-serif !default;
+$avenir-book:         "Avenir Book", sans-serif !default;
 
 $font-size-base:          14px !default;
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
