@@ -12,10 +12,18 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-  color: $main-color;
+  color: $white;
   text-transform: none;
 }
-
+p {
+  margin: 0 0 20px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.mt60 {
+  margin-top: 60px;
+}
 ul {
   margin: 0;
 }
@@ -57,7 +65,7 @@ ul {
       -ms-transform: translateY(-50%);
       -o-transform: translateY(-50%);
       transform: translateY(-50%);
-      width: 15.65vw;
+      width: 200px;
       color: $white;
       .fa {
         position: absolute;
@@ -71,6 +79,9 @@ ul {
     .owl-next {
       right: 0;
     }
+  }
+  .owl-item img {
+    max-height: 500px;
   }
 }
 
@@ -86,9 +97,13 @@ ul {
   }
 }
 
+.md-close {
+
+}
+
 .scroll-btn {
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   left: 0;
   width: 100%;
   .scroll {
@@ -101,6 +116,7 @@ ul {
     border: 0;
     border-radius: 50%;
     box-shadow: 0px 0px 15px rgba(26, 85, 166, 0.3);
+    outline: none;
   }
 }
 
@@ -126,6 +142,9 @@ ul {
     top: 26%;
     z-index: -1;
   }
+  h2, p {
+    color: $main-color;
+  }
 }
 
 #section2 {
@@ -149,11 +168,9 @@ ul {
     }
   }
 }
+
 #section3 {
   background-color: $blue;
-  h1, h2, h3, h4, h5, h6, p {
-    color: $white;
-  }
   .myBtn {
     &.inverse {
       background-color: #ededed;
@@ -162,6 +179,42 @@ ul {
   }
 }
 
+#section4 {
+  background-color: $blue;
+  .description {
+    padding-bottom: 45px;
+  }
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+#section5, #section6 {
+  h2, h4, h6, p {
+    color: $main-color;
+  }
+}
+#section5 {
+  //.owl-carousel {
+  //  .owl-stage {
+  //    .owl-item {
+  //      opacity: 0.5;
+  //    }
+  //    .owl-item.active {
+  //      opacity: 1;
+  //      &:not(.cloned) {
+  //        margin-left: 65px;
+  //      }
+  //    }
+  //    .owl-item.active {
+  //      opacity: 1;
+  //      //&:not(.cloned) {
+  //      //  margin-left: 65px;
+  //      //}
+  //    }
+  //  }
+  //}
+}
 #page-footer {
   #social {
     background-color: #e8e8e8;
