@@ -34,6 +34,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // rejestrowanie domyślnego zestawu zadań dla Grunt.js
     grunt.registerTask('default', ['watch']);
 };
