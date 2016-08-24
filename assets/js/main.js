@@ -38,7 +38,7 @@ jQuery.noConflict();
             loop: false
         });
         $('#fullpage').fullpage({});
-        
+
         $('.scroll').click(function () {
             $.fn.fullpage.moveSectionDown();
         });
@@ -64,6 +64,6 @@ jQuery.noConflict();
             $.fn.fullpage.setAllowScrolling(true);
             $.fn.fullpage.setKeyboardScrolling(true);
         });
-        
+
     });
 }(jQuery));

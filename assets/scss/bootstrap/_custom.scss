@@ -16,31 +16,38 @@ h1, h2, h3, h4, h5, h6, p {
   color: $white;
   text-transform: none;
 }
+
 h2 {
   font-size: 3.6rem;
 }
+
 p {
   font-family: $avenir-roman;
   margin: 0 0 20px;
 }
+
 button {
   font-family: $avenir-medium;
 }
+
 .mt20 {
   margin-top: 20px;
 }
+
 .mt40 {
   margin-top: 40px;
   @include bp(small) {
     margin-top: 20px;
   }
 }
+
 .mt60 {
   margin-top: 60px;
   @include bp(small) {
     margin-top: 30px;
   }
 }
+
 ul {
   margin: 0;
 }
@@ -112,6 +119,7 @@ ul {
     max-height: 500px;
   }
 }
+
 .owl-carousel2 {
   @include bp(small) {
     margin-top: 20px;
@@ -151,7 +159,7 @@ ul {
   width: 100%;
   top: 0;
   z-index: 999;
-  background-color: rgba(238,238,238,0.8);
+  background-color: rgba(238, 238, 238, 0.8);
   display: none;
   .close-btn {
     position: absolute;
@@ -166,7 +174,7 @@ ul {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     @include bp(small) {
       position: static;
       transform: none;
@@ -185,6 +193,7 @@ ul {
     }
   }
 }
+
 #video-popup {
   background-color: rgba(63, 145, 255, 0.6);
   .wrap-content {
@@ -294,11 +303,13 @@ ul {
     padding-right: 0;
   }
 }
+
 #section5, #section6 {
   h2, h4, h6, p {
     color: $main-color;
   }
 }
+
 #section5 {
   .owl-carousel2 {
     .owl-stage {
@@ -318,6 +329,7 @@ ul {
     }
   }
 }
+
 #page-footer {
   #social {
     background-color: #e8e8e8;
