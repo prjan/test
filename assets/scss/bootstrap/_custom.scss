@@ -9,20 +9,37 @@ body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
+  font-weight: 300;
 }
 
 h1, h2, h3, h4, h5, h6, p {
   color: $white;
   text-transform: none;
 }
+h2 {
+  font-size: 3.6rem;
+}
 p {
+  font-family: $avenir-roman;
   margin: 0 0 20px;
+}
+button {
+  font-family: $avenir-medium;
+}
+.mt20 {
+  margin-top: 20px;
 }
 .mt40 {
   margin-top: 40px;
+  @include bp(small) {
+    margin-top: 20px;
+  }
 }
 .mt60 {
   margin-top: 60px;
+  @include bp(small) {
+    margin-top: 30px;
+  }
 }
 ul {
   margin: 0;
@@ -35,6 +52,14 @@ ul {
   .navbar {
     .navbar-brand {
       padding-top: 0;
+    }
+  }
+  @include bp(small) {
+    margin: 0;
+    padding: 0;
+    top: 20px;
+    .navbar {
+      margin-bottom: 0;
     }
   }
 }
@@ -67,6 +92,9 @@ ul {
       transform: translateY(-50%);
       width: 200px;
       color: $white;
+      @include bp(small) {
+        width: 80px;
+      }
       .fa {
         position: absolute;
         top: 50%;
@@ -84,6 +112,11 @@ ul {
     max-height: 500px;
   }
 }
+.owl-carousel2 {
+  @include bp(small) {
+    margin-top: 20px;
+  }
+}
 
 .myBtn {
   background-color: $blue;
@@ -92,13 +125,74 @@ ul {
   font-size: 1.4rem;
   color: $white;
   padding: 8px 25px;
+  margin-top: 5px;
+  margin-bottom: 30px;
   .fa {
     margin-left: 7px;
   }
+  &.inverse {
+    background-color: #ededed;
+    color: #83b5f8;
+    &.md-close {
+      background-color: $white;
+      color: $main-color;
+      margin-top: 40px;
+      .fa {
+        margin-left: 0;
+        margin-right: 7px;
+      }
+    }
+  }
 }
 
-.md-close {
-
+#form-popup, #video-popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: rgba(238,238,238,0.8);
+  display: none;
+  .close-btn {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+    color: $main-color;
+    font-size: 1.8rem;
+    font-weight: 300;
+  }
+  .wrap-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    @include bp(small) {
+      position: static;
+      transform: none;
+    }
+  }
+  .content {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #eeeeee;
+    padding: 97px 70px;
+    box-shadow: 0px 0px 15px rgba(26, 85, 166, 0.3);
+    h2 {
+      margin-top: 0;
+      margin-bottom: 50px;
+      color: $main-color;
+    }
+  }
+}
+#video-popup {
+  background-color: rgba(63, 145, 255, 0.6);
+  .wrap-content {
+    max-width: 1080px;
+  }
+  .close-btn {
+    color: $white;
+  }
 }
 
 .scroll-btn {
@@ -118,6 +212,14 @@ ul {
     box-shadow: 0px 0px 15px rgba(26, 85, 166, 0.3);
     outline: none;
   }
+  @include bp(small) {
+    bottom: 15px;
+    .scroll {
+      width: 45px;
+      height: 45px;
+      padding: 4px;
+    }
+  }
 }
 
 .form {
@@ -125,12 +227,17 @@ ul {
     border: 2px solid #8e99a8;
     border-radius: 0;
     background: transparent;
-    padding: 12px;
+    padding: 20px 12px;
     font-size: 1.2rem;
   }
   .form-group {
     margin-left: 0;
     margin-right: 0;
+    padding-left: 7px;
+    padding-right: 7px;
+    @include bp(small) {
+      padding: 0;
+    }
   }
 }
 
@@ -156,6 +263,10 @@ ul {
       bottom: 0;
       left: 50%;
       transform: translateX(-50%);
+      @include bp(small) {
+        left: auto;
+        transform: none;
+      }
     }
   }
   .gallery-bottom {
@@ -171,12 +282,6 @@ ul {
 
 #section3 {
   background-color: $blue;
-  .myBtn {
-    &.inverse {
-      background-color: #ededed;
-      color: #83b5f8;
-    }
-  }
 }
 
 #section4 {
@@ -195,25 +300,23 @@ ul {
   }
 }
 #section5 {
-  //.owl-carousel {
-  //  .owl-stage {
-  //    .owl-item {
-  //      opacity: 0.5;
-  //    }
-  //    .owl-item.active {
-  //      opacity: 1;
-  //      &:not(.cloned) {
-  //        margin-left: 65px;
-  //      }
-  //    }
-  //    .owl-item.active {
-  //      opacity: 1;
-  //      //&:not(.cloned) {
-  //      //  margin-left: 65px;
-  //      //}
-  //    }
-  //  }
-  //}
+  .owl-carousel2 {
+    .owl-stage {
+      .owl-item {
+        opacity: 0.5;
+        transition: all 0.7s;
+        .description {
+          visibility: hidden;
+        }
+        &:hover {
+          opacity: 1;
+          .description {
+            visibility: visible;
+          }
+        }
+      }
+    }
+  }
 }
 #page-footer {
   #social {
@@ -222,5 +325,8 @@ ul {
     position: absolute;
     bottom: 0;
     width: 100%;
+    @include bp(small) {
+      padding: 10px 0;
+    }
   }
 }
