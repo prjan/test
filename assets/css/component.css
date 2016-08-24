@@ -261,13 +261,6 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Effect 7:  slide and stick to top */
-.md-effect-7 {
-    top: 0;
-    -webkit-transform:;
-    -moz-transform:;
-    -ms-transform:;
-    transform:;
-}
 
 .md-effect-7 .md-content {
     -webkit-transform: translateY(-200%);
